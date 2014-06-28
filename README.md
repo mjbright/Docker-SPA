@@ -1,0 +1,4 @@
+SPA
+===
+
+SinglePageWebApplication appliance
