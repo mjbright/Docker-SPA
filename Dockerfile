@@ -29,6 +29,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mongodb
 # Add JSLint:
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install default-jdk wget zip unzip
 
+# Add HTML tidy:
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tidy tidy-doc
+#RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tidy tidy-doc csstidy; exit 0
+
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install -g jquery
 RUN npm install -g nodeunit
@@ -37,6 +41,16 @@ RUN npm install -g connect
 # Added for basic testing:
 RUN npm install -g serve-static
 RUN npm install -g http-server
+
+# Added for basic testing:
+RUN npm install -g express
+RUN npm install -g mongodb
+RUN npm install -g socket.io
+RUN npm install -g JSV
+RUN npm install -g q
+RUN npm install -g promised-io
+RUN npm install -g jslint
+
 
 #ADD root.bashrc /root/.bashrc
 # Default command
