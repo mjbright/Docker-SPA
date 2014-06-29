@@ -44,6 +44,7 @@ RUN npm install -g http-server
 
 # Added for basic testing:
 RUN npm install -g express
+RUN npm install -g express-logger
 RUN npm install -g mongodb
 RUN npm install -g socket.io
 RUN npm install -g JSV
